@@ -1,0 +1,8 @@
+﻿.btnPointer {
+    cursor:pointer;    
+}
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,740 @@
+﻿.bg-fondo-cuadros{
+     background-image: url(../img/fondo.html);
+}
+
+.divPortadaRedes {
+    /*width:90%;*/
+    width:410px;
+    height:240px;
+    background-color:black;
+    margin: auto;
+}
+
+.Facebook
+{
+    background-color:#3c5a98;
+     background-image: url(../../images/fondoface.jpg);
+    background-size:cover;
+    margin-top:10px;
+    background-position:center;
+}
+
+.Twitter{
+    background-color:#29c5f6;
+    background-image: url(../../images/fondotwitter.png);
+    background-size:cover;
+    margin-top:5px;
+    margin-bottom:10px;
+    background-position:center;
+}
+
+.divLeyEspecial {
+    width:100%;
+    height:250px;
+    background-color:#444040;
+    margin: 4px;
+}
+
+.swipitem{
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+
+.swiper-container {
+    padding: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.Shared:hover{
+    color:red;
+}
+
+.frame {
+    width:100%;
+    height:100%;
+}
+
+#twitter-widget-0{
+    max-height:240px !important;
+    min-height: 0px !important;
+    margin-top: 4px;
+    
+}
+
+.Mensajes{
+    padding: 0px !important;
+}
+
+.TituloNoticia
+{
+    color:black;
+    font-weight: bold;
+        line-height: 1;
+}
+
+.HashTagNoticias{
+    color:black;
+    font-family: fantasy;
+    padding-bottom:10px;
+}
+
+.DescripcionNoticia{
+    color:black;
+    text-align: justify;
+}
+
+.DivImagenNoticia{
+    width: 100%;
+    height:240px;
+  box-shadow: 24px 24px 43px -8px rgba(148,148,148,1);
+     background-repeat:no-repeat;
+     background-size:cover;
+}
+
+.btnLeerMas{
+    color:black;
+    /*border-color:black;
+    border-style:solid;*/
+    border: 1px solid;
+    width: 80px;
+    margin-left:10px;
+    padding-left:5px;
+    margin-bottom:5px;
+}
+
+.TituloTestimonials{
+    width:100%;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+}
+
+.SomosComite{
+    color:black;
+    text-align:center;
+    width:50%;
+    margin: auto;
+    font-weight:lighter;
+}
+
+.Circle{
+  -webkit-border-radius: 200%;
+    -moz-border-radius: 200%;
+    border-radius: 200%;
+    width: 140px;
+    height:140px;
+    overflow: hidden;
+        margin: auto;
+    border-color:black;
+    border-style:solid;
+}
+
+.ImgPerfilComite{
+   width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+}
+
+.Noticias{
+    margin-top: 20px !important;
+}
+
+.NombreComite{
+    text-align:center;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+.CargoComite{
+    text-align:center;
+    color:black;
+    font-size: 14px;
+}
+
+.titlerealidad{
+}
+
+.FondoLogoRealidad{
+    /*background-color:#1a2732;*/
+    width:70%;
+    margin:auto;
+    padding:10px;
+    height:140px;
+}
+
+.FondoTextoRealidad{
+    width:70%;
+    margin:auto;
+    padding:10px;
+    min-height:140px !important;
+    background-color:#1b2227;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(29,28,35,1) 0%,rgba(29,28,35,0) 80%);
+}
+
+.logo{
+    position: fixed;
+    z-index: 99999;
+}
+
+
+.grises a {
+filter: url('#grayscale'); /* Versión SVG para IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 */
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+filter: grayscale(100%); /* Para cuando es estándar funcione en todos */
+filter: Gray(); /* IE4-8 and 9 */
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+
+.HeaderNoticias{
+    top: 0px !important;
+    background: rgba(255,255,255,0.7);
+    height: 100%;
+    width: 100% !important;
+}
+
+@media only screen and (min-width: 1750px) {
+    .TituloNoticia {
+    color: black;
+    font-weight: bold;
+    font-size:26px;
+    line-height: 1.5;
+}
+
+    .HashTagNoticias{
+    color:black;
+    font-family: fantasy;
+    font-size:20px;
+    padding-bottom:10px;
+}
+    .DescripcionNoticia{
+    color:black;
+    text-align: justify;
+    font-size:20px;
+}
+    .btnLeerMas{
+    color:black;
+    /*border-color:black;
+    border-style:solid;*/
+    border: 1px solid;
+    width: 80px;
+    margin-left:10px;
+    padding-left:5px;
+    margin-bottom:5px;
+    font-size:15px;
+}
+    .DivImagenNoticia{
+    width: 100%;
+    height:350px;
+    box-shadow: 24px 24px 43px -8px rgba(148,148,148,1);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+    #DivContenidoNot{
+        margin-top:40px;
+    }
+    
+    #divPrimerContainer{
+    width:100%;
+    background-color: #181a1c;
+    max-height: 550px;
+    }
+
+    .testimonial p {
+    color: #181A1C;
+    background: #fdf3b7;
+    padding: 15px;
+    margin: 0;
+    text-align:justify;
+    font-size:20px;
+}
+
+     .TituloTestimonials{
+    width:100%;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+
+      .SomosComite{
+    color:black;
+    text-align:center;
+    width:50%;
+    margin: auto;
+    font-weight:lighter;
+    font-size:20px;
+}
+       .NombreComite{
+    text-align:center;
+    color:black;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+        .CargoComite{
+    text-align:center;
+    color:black;
+    font-size: 20px;
+}
+        .TextoRealidad {
+     font-size:20px;
+  text-align:center;
+}
+
+         .TextoContactanos{
+     color:white !important; 
+     width:100% !important;
+     text-align:center !important;
+     font-size:20px;
+}
+
+}
+
+.DivImagenDetalleNoticia{
+    /*width: 50%;*/
+    height:240px;
+    /*border-style:solid;*/
+     /*background-size:cover;*/
+     border-color: black;
+     background-repeat:no-repeat;
+     margin:auto;
+     background-size: cover;
+}
+
+.TituloDetalleNoticia{
+    margin:auto;
+    /*text-align:center;*/
+    color:black;
+    font-size:20px;
+}
+
+.DescripcionDetalleNoticia{
+    text-align:justify;
+    /*width:50%;*/
+    margin:auto;
+    padding:10px;
+    color:black;
+    font-weight: 100;
+}
+
+
+#divPrimerContainer{
+width:100%;
+background-color: #181a1c;
+min-height:550px;
+}
+
+
+.testimonial p {
+    color: #181A1C;
+    background: #fdf3b7;
+    padding: 15px;
+    margin: 0;
+    text-align:justify;
+}
+
+.testimonial .arrow {
+    margin-left: 10px;
+    width: 0;
+    border-top: 10px solid #fdf3b7;
+    border-left: 20px outset transparent;
+    border-right: 20px outset transparent;
+}
+
+
+.backgroundnegro{
+    background-color:#1f2c36 !important;
+}
+
+
+.triangle {
+    margin: 0 auto;
+    text-align: center;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #1f2c36;
+    border-left: 585px outset transparent;
+    border-right: 585px outset transparent;
+    position: relative;
+}
+
+.ColorFondo {
+    background-color: #f37ba9;
+}
+
+.TextoDeTestimonios{
+    font-size:20px;
+    text-align:justify;
+}
+
+.NombrePersonaTestimonio{
+    color: black; text-align: center; font-weight: bold;
+    font-size:20px;
+}
+
+.TextoRealidad {
+    text-align:justify;
+   
+}
+
+
+@media (max-width: 767px) { 
+.TextoRealidad {
+     font-size:17px;
+  text-align:center;
+}
+.TextoDeTestimonios{
+    font-size:17px;
+    text-align:center;
+}
+
+.testimonial p {
+    color: #181A1C;
+    background: #fdf3b7;
+    padding: 15px;
+    margin: 0;
+    text-align:center;
+    font-size:17px;
+}
+
+#divPrimerContainer{
+width:100%;
+background-color: #181a1c;
+min-height:630px;
+}
+
+ .DescripcionNoticia{
+    color:black;
+    text-align: center;
+    font-size:18px;
+}
+
+ .TituloNoticia
+{
+     font-size:17px;
+    color:black;
+    font-weight: bold;
+        line-height: 1.5;
+}
+
+ .HashTagNoticias{
+    color:black;
+    font-family: fantasy;
+    font-size:17px;
+    padding-bottom:10px;
+}
+
+ .TituloTestimonials{
+    width:100%;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size:17px;
+}
+
+ .SomosComite{
+    color:black;
+    text-align:center;
+    width:50%;
+    margin: auto;
+    font-weight:lighter;
+    font-size:17px;
+}
+ .NombreComite{
+    text-align:center;
+    color:black;
+    font-size: 17px;
+    font-weight:bold;
+}
+ .CargoComite{
+    text-align:center;
+    color:black;
+    font-size: 17px;
+}
+
+ .TextoContactanos{
+     color:white !important; 
+     width:100% !important;
+     text-align:center !important;
+     font-size:17px;
+}
+}
+
+.TextoContactanos{
+     color:white !important; 
+     width:100% !important;
+     text-align:center !important;
+}
+
+
+.TextPdfLey{
+    font-weight:bold;
+    color:black;
+}
+
+.MenuLeftCollapse{
+    margin-left:200px;
+}
+
+.MenuSinLeftCollapse{
+    margin-left:0px;
+}
+
+.FondoDetalleNoticia{
+    background-color:white;
+        padding: 50px;
+}
+
+#DivNoticia p{
+    color:black !important;
+}
+
+.DescripcionNoticia p {
+    color:black !important;
+}
+
+#DetalleCorto p {
+   color:black !important;
+}
+
+
+.form-control {
+    /*display: block;
+    width: 100%;*/
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        
+}
+
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-append > .btn, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-prepend > .input-group-text {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+
+.videoFirst {
+  
+}
+
+.minivideo {
+    background-image: url('../../images/IMG-20180515-WA0082.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:200px;
+    border-radius: 20px;
+}
+
+.transparentplayicon {
+    background: transparent url('../../images/playtransparent.png') no-repeat scroll 0 0 / 100% auto;
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.playicon {
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: black;
+}
+
+
+.transparentplayicon:hover {
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -moz-transform: scale(1.5); /* Firefox */
+    -ms-transform: scale(1.5); /* IE 9 */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+}
+
+.D-TituloVideosListas {
+    background-image: url("../img/bgblack.png");
+    background-repeat: repeat;
+    border: medium none;
+    bottom: 0;
+    color: white;
+    font-size: 14px;
+    padding: 2%;
+    position: absolute;
+    width: 100%;
+}
+
+
+.textTip {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: black !important;
+}
+
+.contendorTip {
+    box-shadow: 14px 24px 43px -8px rgba(148,148,148,1);
+    background-color: white;
+    padding: 10px;
+    color: black;
+}
+
+.ContainerForm {
+    background: rgba(42, 40, 40, 0.5);
+    padding:10px;
+    border-radius: 15px;
+}
+
+.colorNumberTip {
+    color: #f34bb4 !important;
+}
+
+.footer {
+    width: 20%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 2px solid #f37ba9;
+    background-color: #f37ba9;
+    color: white;
+    font-family: Helvetica;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.textboxChat {
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    width: 90%;
+    box-sizing: border-box;
+    webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.textareaChat {
+    line-height: 20px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    width: 90%;
+    box-sizing: border-box;
+    webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.buttonchat {
+    color: #ffffff;
+    background-color: #f37ba9;
+    border-color: #f37ba9;
+    border-radius: 3px;
+    border: none;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5px;
+}
+
+.labelChat {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: #666666;
+    width: 90%;
+    margin-left: 5%;
+    text-align: -webkit-auto;
+    font-weight: 700;
+}
+
+.chatTittle {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    text-align: left;
+    cursor:pointer;
+}
+
+.switch-version {
+    position: fixed;
+    width: 40px;
+    background: #fff;
+    right: 0;
+    top: 49%;
+    border-radius: 4px 0 0 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.d-md-block {
+    display: block !important;
+}
+
+.switch-to.mdb-jquery {
+    background-position: 1px;
+}
+
+
+.switch-to {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url('../../images/ico/icon_chat.png');
+}
+
+
+    .switch-to.active {
+        background-color: rgba(0,0,0,.15);
+    }
