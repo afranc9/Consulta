@@ -638,8 +638,8 @@ min-height:630px;
     width: 20%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    border: 2px solid #f37ba9;
-    background-color: #f37ba9;
+    border: 2px solid transparent;
+    background-color: transparent !important;
     color: white;
     font-family: Helvetica;
     position: fixed;
@@ -705,6 +705,10 @@ min-height:630px;
     font-size: 12px;
     text-align: left;
     cursor:pointer;
+    background-color: #f37ba9;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left: 9px;
 }
 
 .switch-version {

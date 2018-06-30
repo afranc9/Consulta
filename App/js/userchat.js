@@ -307,9 +307,24 @@ FriendlyChat.resetMaterialTextfield = function (element) {
 // Template for messages.
 FriendlyChat.MESSAGE_TEMPLATE =
     '<div style="color:black; padding: 4px; padding-top: 0px; padding-bottom: 6px;" class="message-container">' +
-    '<div style="font-size: 12px; font-weight: bold; text-align: left;" class="name"></div>' +
     '<div style="display:none;" class="spacing"><div class="pic"></div></div>' +
-    '<div class="message bocadilloarriba"></div>' +
+    '<table style="width:100%"> ' +
+    '<tbody><tr> ' +
+    '<td style=" width: 5%;"><div style="font-size: 12px;font-weight: bold;text-align: left;float: left;padding-top: 10px;" class="name">Yo</div> ' +
+    '</td> ' +
+    '<td style=" width: 85%;"><div class="message bocadilloarriba"></div></td></tr></tbody></table>' +
+    '<div style="display:none;" class="date"></div>' +
+    '</div>';
+
+FriendlyChat.MESSAGE_TEMPLATE_ADMIN =
+    '<div style="color:black; padding: 4px; padding-top: 0px; padding-bottom: 6px;" class="message-container">' +
+    '<div style="display:none;" class="spacing"><div class="pic"></div></div>' +
+    '<table style="width:100%"> ' +
+    '<tbody><tr> ' +
+    '<td style=" width: 85%;"><div class="message bocadilloarribaAdmin"></div></td>' +
+    '<td style=" width: 5%;"><div style="font-size: 12px;font-weight: bold;text-align: left;right: left;padding-top: 10px;" class="name">Ejecutivo</div> ' +
+    '</td> ' +
+    '</tr></tbody></table>' +
     '<div style="display:none;" class="date"></div>' +
     '</div>';
 
@@ -322,7 +337,15 @@ FriendlyChat.prototype.displayMessage = function (key, name, text, picUrl, image
     // If an element for that message does not exists yet we create it.
     if (!div) {
         var container = document.createElement('div');
-        container.innerHTML = FriendlyChat.MESSAGE_TEMPLATE;
+
+        console.log(name);
+        console.log($("#inputClientName").val());
+
+        if (name == $("#inputClientName").val()) {
+            container.innerHTML = FriendlyChat.MESSAGE_TEMPLATE;
+        } else {
+            container.innerHTML = FriendlyChat.MESSAGE_TEMPLATE_ADMIN;
+        }
         div = container.firstChild;
         div.setAttribute('id', key);
         this.messageList.appendChild(div);
@@ -330,7 +353,7 @@ FriendlyChat.prototype.displayMessage = function (key, name, text, picUrl, image
     if (picUrl) {
         div.querySelector('.pic').style.backgroundImage = 'url(' + picUrl + ')';
     }
-    div.querySelector('.name').textContent = name;
+    //div.querySelector('.name').textContent = name;
     div.querySelector('.date').textContent = fechahora;
     var messageElement = div.querySelector('.message');
     if (text) { // If the message is text.
@@ -422,7 +445,7 @@ window.onload = function () {
         var pais = $("#selectfooterCountry").val();
         var sexo = $("#selectFooterSex").text();
         var consulta = "Hola";//$("#Consulta").val();
-
+        $("#inputClientName").val(nickName);
 
         currentName = nickName;
         var fecha = new Date();

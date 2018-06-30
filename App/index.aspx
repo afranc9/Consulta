@@ -334,7 +334,7 @@
     <!-- -->
     <footer id="staticChat" class="pull-right text-center footer hidden-xs">
 
-        <div id="divarrow" style="font-family: cursive;" class="row">
+        <div id="divarrow" style=" color:black; font-family: cursive; background-color: transparent !important;" class="row">
             <div class="col-md-4">
                 <img width="80" height="80" src="../images/gif/arrow_down.gif" />
             </div>
@@ -347,9 +347,10 @@
                 </label>
             </div>
         </div>
-        <div class="chatTittle">
-            Chat
-            <i id="btnOpenChat" class="fa fa-caret-up pull-right" style="font-size: 24px"></i>
+        <div class="chatTittle">            
+            <span style="font: 20px Helvetica,Arial,sans-serif;">En Linea</span>
+            <i id="btnOpenChat" class="fa fa-angle-up pull-right" style="font-size: 24px; padding-right: 5px;"></i>
+            <i id="btnCloseChat" class="fa fa-close pull-right" style="display:none; font-size: 24px; padding-right: 5px;"></i>
         </div>
         <div id="demo" style="background-color: white !important;" class="collapse">
             <div id="divOpenChat" miwo-name="name" class="form-group">
@@ -419,21 +420,42 @@
         </div>
     </footer>
 
+    <input id="inputClientName" type="hidden" value="" />
+
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="js/firebase-messaging-sw.js"></script>
     <script src="js/userchat.js"></script>
     <style type="text/css">
         .bocadilloarriba {
             padding: 10px;
-            width: 220px;
-            border-radius: 10px;
-            background-color: #f5f7f5;
+            border-radius: 0px 15px 0px 15px;
+            background-color: #1f6ab7;
             font-family: "trebuchet ms", tahoma, verdana, sans­serif;
             font-size: 0.7em;
-            border-color: black;
+            border-color: white;
             border-width: 1px;
             text-align: left;
             border-style: solid;
+            float: right;   
+            text-align: left;   
+            color: white;
+            width:90%;
+        }
+
+        .bocadilloarribaAdmin {
+            padding: 10px;
+            border-radius: 0px 15px 0px 15px;
+            background-color: orange;
+            font-family: "trebuchet ms", tahoma, verdana, sans­serif;
+            font-size: 0.7em;
+            border-color: white;
+            border-width: 1px;
+            text-align: left;
+            border-style: solid;
+            float: left;   
+            text-align: left;   
+            width: 90%;
+            color: white;
         }
     </style>
 
@@ -463,10 +485,14 @@
             if ($("#demo").hasClass("in")) {
                 $("#divarrow").show();
                 $("#demo").removeClass("in");
+                $("#btnCloseChat").hide();
+                $("#btnOpenChat").show();
             }
             else {
                 $("#divarrow").hide();
                 $("#demo").addClass("in");
+                $("#btnCloseChat").show();
+                $("#btnOpenChat").hide();
             }
 
         });
