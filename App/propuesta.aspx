@@ -482,21 +482,42 @@
         </div>
     </footer>
 
+    <input id="inputClientName" type="hidden" value="" />
+
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="js/firebase-messaging-sw.js"></script>
     <script src="js/userchat.js"></script>
     <style type="text/css">
         .bocadilloarriba {
             padding: 10px;
-            width: 220px;
-            border-radius: 10px;
-            background-color: #f5f7f5;
+            border-radius: 0px 15px 0px 15px;
+            background-color: #1f6ab7;
             font-family: "trebuchet ms", tahoma, verdana, sans­serif;
             font-size: 0.7em;
-            border-color: black;
+            border-color: white;
             border-width: 1px;
             text-align: left;
             border-style: solid;
+            float: right;   
+            text-align: left;   
+            color: white;
+            width:90%;
+        }
+
+        .bocadilloarribaAdmin {
+            padding: 10px;
+            border-radius: 0px 15px 0px 15px;
+            background-color: orange;
+            font-family: "trebuchet ms", tahoma, verdana, sans­serif;
+            font-size: 0.7em;
+            border-color: white;
+            border-width: 1px;
+            text-align: left;
+            border-style: solid;
+            float: left;   
+            text-align: left;   
+            width: 90%;
+            color: white;
         }
     </style>
 
