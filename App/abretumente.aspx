@@ -50,7 +50,7 @@
                     <img src="../images/logo.png" class="logo" width="120" height="40" alt="Logo">
                 </a>
                 <!-- Navigation button, visible on small resolution -->
-                <input type="image" onclick="BtnMenuClick()" data-toggle="collapse" class="btn btn-navbar" src="images/ico/icon-menu.png" alt="Submit" data-target=".nav-collapse" width="40" height="40">
+                <input type="image" onclick="BtnMenuClick()" data-toggle="collapse" class="btn btn-navbar" src="../images/ico/icon-menu.png" alt="Submit" data-target=".nav-collapse" width="40" height="40">
                 <!-- Main navigation -->
                 <div id="MenuCollapse" class="nav-collapse collapse MenuLeftCollapse">
                     <ul class="nav" id="top-navigation">
