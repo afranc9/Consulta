@@ -169,21 +169,28 @@ FriendlyChat.prototype.saveImageMessage = function (event) {
         this.signInSnackbar.MaterialSnackbar.showSnackbar(data);
         return;
     }
+
+    var fecha = new Date();
+    var datenow = fecha.toISOString().slice(0, 10) + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
+
     // Check if the user is signed-in
-    if (this.checkSignedInWithMessage()) {
+    //if (this.checkSignedInWithMessage()) {
 
         // TODO(DEVELOPER): Upload image to Firebase storage and add message.
         // We add a message with a loading icon that will get updated with the shared image.
         var currentUser = this.auth.currentUser;
-        this.messagesRef.push({
-            idconversacion: urlAdminSeleccionado,
-            name: currentUser.displayName,
+    this.messagesRef.push({
+            name: currentName,
+            idconversacion: furlbase.replace("Conversaciones/", ""),
+            //name: currentUser.displayName,
             imageUrl: FriendlyChat.LOADING_IMAGE_URL,
-            photoUrl: currentUser.photoURL || '/images/profile_placeholder.png'
+            fechahora: datenow,
+            text:""
+            //photoUrl: currentUser.photoURL || '/images/profile_placeholder.png'
         }).then(function (data) {
 
             // Upload the image to Cloud Storage.
-            var filePath = currentUser.uid + '/' + data.key + '/' + file.name;
+            var filePath = $("#inputClientName").val() + '/' + data.key + '/' + file.name;
             return this.storage.ref(filePath).put(file).then(function (snapshot) {
 
                 // Get the file's Storage URI and update the chat message placeholder.
@@ -195,7 +202,7 @@ FriendlyChat.prototype.saveImageMessage = function (event) {
         });
 
 
-    }
+    //}
 };
 
 // Signs-in Friendly Chat.
@@ -307,7 +314,7 @@ FriendlyChat.resetMaterialTextfield = function (element) {
 // Template for messages.
 FriendlyChat.MESSAGE_TEMPLATE =
     '<div style="color:black; padding: 4px; padding-top: 0px; padding-bottom: 6px;" class="message-container">' +
-    '<div style="display:none;" class="spacing"><div class="pic"></div></div>' +
+    '<div class="spacing"><div class="pic"></div></div>' +
     '<table style="width:100%"> ' +
     '<tbody><tr> ' +
     '<td style=" width: 5%;"><div style="font-size: 12px;font-weight: bold;text-align: left;float: left;padding-top: 10px;" class="name">Yo</div> ' +
@@ -318,7 +325,7 @@ FriendlyChat.MESSAGE_TEMPLATE =
 
 FriendlyChat.MESSAGE_TEMPLATE_ADMIN =
     '<div style="color:black; padding: 4px; padding-top: 0px; padding-bottom: 6px;" class="message-container">' +
-    '<div style="display:none;" class="spacing"><div class="pic"></div></div>' +
+    '<div class="spacing"><div class="pic"></div></div>' +
     '<table style="width:100%"> ' +
     '<tbody><tr> ' +
     '<td style=" width: 85%;"><div class="message bocadilloarribaAdmin"></div></td>' +
@@ -338,7 +345,6 @@ FriendlyChat.prototype.displayMessage = function (key, name, text, picUrl, image
     if (!div) {
         var container = document.createElement('div');
 
-        console.log(name);
         console.log($("#inputClientName").val());
 
         if (name == $("#inputClientName").val()) {
@@ -350,9 +356,10 @@ FriendlyChat.prototype.displayMessage = function (key, name, text, picUrl, image
         div.setAttribute('id', key);
         this.messageList.appendChild(div);
     }
-    if (picUrl) {
-        div.querySelector('.pic').style.backgroundImage = 'url(' + picUrl + ')';
-    }
+    
+    //if (picUrl) {
+    //    div.querySelector('.pic').style.backgroundImage = 'url(' + picUrl + ')';
+    //}
     //div.querySelector('.name').textContent = name;
     div.querySelector('.date').textContent = fechahora;
     var messageElement = div.querySelector('.message');
@@ -479,4 +486,4 @@ window.onload = function () {
 
         FriendlyChat.prototype.cfurl(codeConversation);
     });
-}
+}
