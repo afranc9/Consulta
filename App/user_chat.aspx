@@ -105,10 +105,10 @@
                                 <span id="message-filler"></span>
                             </div>
                             
-                            <form style="display:none;" id="image-form" action="#">
-                                <input id="mediaCapture" type="file" accept="image/*,capture=camera">
-                                <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
-                                    <i class="material-icons">image</i>
+                            <form  id="image-form" action="#">
+                                <input style="display:none;" id="mediaCapture" type="file" accept="image/*,capture=camera">
+                                <button style="display:none;" id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
+                                    <i id="icon_image" class="material-icons">image</i>
                                 </button>
                             </form>
                         </div>
@@ -121,10 +121,20 @@
 
                 </div>
                 <form id="message-form" action="#">
-                    <input id="message" autocomplete="off" type="text" style="height: 30px !important;width: 70%;border-radius: 5px;" class="" placeholder="Mensaje">
-                    <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    <input id="message" autocomplete="off"
+                         type="text" style="height: 30px !important; width: 63%; border-radius: 5px;" class="" placeholder="Mensaje">
+                    <button id="submit" disabled type="submit" 
+                         style="width:15%; display:none;"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
                         Enviar
                     </button>
+                    <img id="imgSend" src="../images/send.png" alt="Enviar"
+                         style="width:15%;max-width: 42px;max-height: 42px;"
+                         height="42" width="42">
+
+                    <img id="imgCamera" src="../images/ic_camera.png" alt="Photo"
+                         style="width:15%;max-width: 42px;max-height: 42px;"
+                         height="42" width="42">
                 </form>
             </div>
         </div>   
@@ -230,7 +240,12 @@
         $(".itemMenu").click(function () {
             $(".logo").attr("style", "display:block");
         });
-
+        $("#imgCamera").click(function () {
+            $("#icon_image").trigger("click");
+        });
+        $("#imgSend").click(function () {
+            $("#submit").trigger("click");
+        });
     </script>
 </body>
 </html>
